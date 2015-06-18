@@ -6,17 +6,17 @@ module.exports = function() {
 	return [
 		{
 			method: 'GET',
-			path: '/devices/{id}',
+			path: '/v1/devices',
 			config : {
-				handler: deviceController.findByID
+				handler: deviceController.find
 			}
 		},
 		{
 			method: 'GET',
-			path: '/devices',
+			path: '/v1/devices/{id}',
 			config : {
-				handler: deviceController.find
+				handler: deviceController.findByID
 			}
-		}
+		}		
 	];
 }();

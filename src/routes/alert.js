@@ -7,22 +7,22 @@ module.exports = function() {
 	return [
 		{
 			method: 'GET',
-			path: '/alerts/{id}',
+			path: '/v1/alerts',
+			config : {
+				handler: alertController.find
+			}
+		},
+		{
+			method: 'GET',
+			path: '/v1/alerts/{id}',
 			config : {
 				handler: alertController.findByID,
 				validate: alertValidate.findByID
 			}
 		},
 		{
-			method: 'GET',
-			path: '/alerts',
-			config : {
-				handler: alertController.find
-			}
-		},
-		{
 			method: 'POST',
-			path: '/alerts',
+			path: '/v1/alerts',
 			config : {
 				handler : alertController.insert,
 				validate : alertValidate.insert
@@ -30,7 +30,7 @@ module.exports = function() {
 		},
 		{
 			method: 'PUT',
-			path: '/alerts/{id}',
+			path: '/v1/alerts/{id}',
 			config : {
 				handler: alertController.update,
 				validate : alertValidate.update
@@ -38,7 +38,7 @@ module.exports = function() {
 		},
 		{
 			method: 'DELETE',
-			path: '/alerts/{id}',
+			path: '/v1/alerts/{id}',
 			config : {
 				handler: alertController.delete,
 				validate : alertValidate.delete
