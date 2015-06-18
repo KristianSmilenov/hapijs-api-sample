@@ -36,7 +36,7 @@ $ chmod +x database.sh
 $ bash database.sh
 ```
 
-Database setup. So it's time to install project dependencies, run the following command:
+So it's time to install project dependencies, run the following command:
 
 ```shell
 $ npm install
@@ -54,7 +54,6 @@ That's it! You should be able to play around your API GETting, POSTing, PUTing A
 
 * **GET** http://localhost:81/v1/devices
 * **GET** http://localhost:81/v1/devices/{id}
-
 * **GET**    http://localhost:81/v1/alerts
 * **POST**   http://localhost:81/v1/alerts
 * **PUT** 	 http://localhost:81/v1/alerts/{id}
